@@ -5,8 +5,6 @@ from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 
-tconv = lambda x: time.strftime("%H:%M:%S %d.%m.%Y", time.localtime(x))  # Конвертация даты в читабельный вид
-
 TOKEN = "6023308624:AAECll38c0whwhOr9Iobk2BpnAmo0eCH9Z0"
 
 bot = Bot(token=TOKEN)
