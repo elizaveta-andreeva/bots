@@ -1,4 +1,5 @@
 import datetime
+import os
 import time
 
 from aiogram import Bot, types
@@ -23,7 +24,7 @@ async def help_command_reply(message: types.Message):
 
 @dp.message_handler()
 async def echo_message(msg: types.Message):
-    filename = ".\\" + str(msg.from_user.username) + ".txt"
+    filename = os.path.join(os.getcwd(), f"{msg.from_user.username}.txt")
     msg_time = datetime.datetime.now()
     reply = "You sent: " + msg.text + ". I don't like it. Try again!"
     with open(filename, "a") as file:
